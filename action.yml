@@ -7,11 +7,6 @@ inputs:
     required: true
     default: 'package'
 runs:
+  name: 'install esy'
   using: 'node12'
-  main: 
-    - name: install esy
-      run: npm install -g esy
-    - name: Install dependencies
-      run: esy "@${{ sandbox }}" install
-    - name: Install dependencies
-      run: esy "@${{ sandbox }}" build-dependencies
+  main: npm install -g esy
