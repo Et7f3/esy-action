@@ -8,7 +8,4 @@ inputs:
     default: 'package'
 runs:
   using: 'node12'
-  main: |
-    npm install -g esy
-    esy "@${{ sandbox }}" install
-    esy "@${{ sandbox }}" build-dependencies
+  main: 'lib/setup-esy.js'
